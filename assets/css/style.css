@@ -2,6 +2,15 @@
   #style.css
 \*-----------------------------------*/
 
+.cairo-font {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
 
 
 /*-----------------------------------*\
@@ -449,6 +458,7 @@ body.active {
 
 .navbar-text {
   color: var(--white_a75);
+    font-family: "Cairo", sans-serif;
   font-weight: var(--fw-300);
   line-height: 1.6;
   margin-block-end: 15px;
@@ -711,6 +721,7 @@ body.active {
 .about .container {
   display: grid;
   gap: 45px;
+  overflow-x: hidden;
 }
 
 .about .wrapper,
@@ -1131,7 +1142,7 @@ body.active {
   }
 
   .hero {
-    padding-block-start: 150px;
+    padding-block-start: 200px;
   }
   .hero .container {
     position: relative;
@@ -1341,7 +1352,7 @@ body.active {
   }
 
   .hero {
-    padding-block: 170px 150px;
+    padding-block: 170px 50px;
   }
   .hero .container {
     max-width: 1190px;
@@ -1363,7 +1374,7 @@ body.active {
   }
   .hero .shape {
     display: block;
-    top: 60%;
+    top: 40%;
     left: 0;
   }
 
@@ -1529,6 +1540,120 @@ body.active {
 
 
 
+
+/* images circle */
+
+
+.container-circle{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 10%;
+}
+
+.shape-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.container-circle .shape-1 img{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition:0.3s ease-in-out  ;
+  -webkit-transition:0.3s ease-in-out  ;
+  -moz-transition:0.3s ease-in-out  ;
+  -ms-transition:0.3s ease-in-out  ;
+  -o-transition:0.3s ease-in-out  ;
+}
+
+
+.container-circle .shape-1 img:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.shape-1 h1{
+  font-size: 17px;
+text-transform: uppercase;
+}
+.shape-1 p{
+padding: 0;
+margin: -15px !important;
+}
+
+/* social icons */
+.header .container .social-icons-and-menu{
+  display: flex;
+  gap: 15px;
+}
+
+.header .container .social-icons-and-menu .social-icons {
+      display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+}
+
+.hero .social-icons-hero{
+  display: none;
+}
+
+@media (max-width:1999px) {
+  .content-hero{
+    position: relative !important;
+    top: 80px !important;
+}
+.container-circle{
+  margin-top: 20%;
+} 
+}
+@media (max-width: 575px) {
+.shape-1{
+  width: 130px;
+  margin: 10px;
+}
+
+.container-circle{
+  margin-top: 95%;
+}
+
+.content-hero{
+    position: relative !important;
+    top: 80px !important;
+}
+.header .container .social-icons-and-menu .social-icons {
+      display: none;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.hero .social-icons-hero{
+display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 10px;
+        position: relative;
+        top: 211px;
+        cursor: pointer;
+}
+
+}
 
 
 
